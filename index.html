@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Segunda Aplicación </title>
+
+<!-- grupo CSS -->
+<link rel="stylesheet" href="css/app2.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!-- grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="Principal" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+   
+     <h1>¿Que tanto te conoces?</h1>
+   </div>
+   <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false" align="center">
+        <h1>Datos personales</h1>
+         <div>
+          <form>
+          <h2>Foto de perfil</h2>
+          <input type="file" name="foto">
+          <h2>Nombre: </h2>
+          <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" autofocus required pattern="[a-zA-Z\sáéíóúñ]{3,}">
+          <span class="invalida">*Requerido</span>
+          <h2>correo:</h2>
+          <input type="email" id="correo" name="Corre" placeholder="Escribe tu correo" required>
+          <span class="invalida">*Requerido</span>
+          <h2> telefono:</h2>
+          <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu telefono" required pattern="[0-9]{7,}">
+          <span class="invalida">*Requerido</span>
+          <h2> pais:</h2>
+          <input type="text" id="pais" name="pais" list="paises">
+          <datalist id="paises">
+          <option>mexico</option>
+          <option>España</option>
+          <option>Argentina</option>
+          <option>Italia</option>
+          <option>Canada</option>
+   </datalist>
+        <h2>Edad:</h2>
+        <input type="number" id="edad" name="edad" min="18">
+        <h2>Fecha de nacimiento</h2>
+        <input type="date" id="fechaN" name="fechaN">
+        
+        <h2> Genero</h2>
+        <select id="genero" name="genero">
+        <option> femenino</option>
+        <option> masculino</option>
+        </select>
+      
+       </form>
+         </div>
+     </div>
+     <div data-role="collapsible" data-content-theme="false" align="center">
+       <h1> intereses </h1>
+        <div>
+        <form>
+        <p>musica</p>
+     <input type="radio" name="genero" value="m"/> pop
+     <input type="radio" name="genero" value="f" />banda
+     <input type="radio" name="genero" value="o"/>otro  
+     <h2> Página favorita </h2>
+         <input type="url" name="favorita"> 
+         <h3> Buscar:</h3> <input type="search" name="buscar">    
+        </form>
+        </div> 
+     </div>
+    <div data-role="collapsible" data-content-theme="false" align="center">
+      <h1> algo mas sobre mi  </h1>
+      <div>
+      <form>
+       <h2 >color favorito </h2>
+        <input type="color" id="color" name="color">
+        <h2>Libro favorito</h2>
+        <input type="text">
+        <h2>Medio de transporte</h2>
+     <input type="checkbox" value="1"/>Bicicleta
+     <input type="checkbox" value="2"/>Automovil
+     <h2> pais favorito</h2>
+     <select name="continente">
+<option value="america">América</option>
+<option value="asia">Asia</option>
+<option value="europa">Europa</option>
+<option value="oceania">Oceanía</option>
+<option value="africa">Africa</option>
+</select>
+        </form>
+   </div>
+  </div> 
+  </div>
+      
+<div>
+    <ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+ 
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+       <h2> Cuestionario</h2>
+       
+       </a>
+      </li>
+   </ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+    <div>
+       <img src="imagenes/persona_rosa.png" width="46" height="46">
+    </div>
+    <div>
+       <h4>Aplicacion </h4>
+       <h4>Fatima flores</h4>
+    </div>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>cuestionario</h1>
+  </div>
+  <div  data-role="content" align="center">
+    <div>
+   
+    <form>
+    
+   <h2>Que tanto te conoces</h2>
+        <input type="number" id="cuantos" name="cuantos"> 
+       <h2> a que te dedicas</h2>
+        
+        <select id="a que" name="a que">
+        <option>none</option>
+        <option> trabajador</option>
+        <option> estudiante</option>
+        <h2>Frecuencia de los viajes</h2> 
+        </select>
+     <h2>Cada cuanto haces ejercicio</h2>
+     <select name="utilizacion"> 
+   	<option value="1">Varias veces al dia 
+   	<option value="2">Una vez al dia 
+   	<option value="3">Varias veces a la semana 
+   	<option value="4">varias veces al mes 
+
+        </select>
+       <h2>pasatiempo</h2>
+ <input type="checkbox" name="pasa" value="tv">TV
+<input type="checkbox" name="pasa" value="libros">Libros
+<input type="checkbox" name="pasa" value="musica">Música
+<input type="checkbox" name="pasa" value="otros">Otros
+<h2> a que hora haces tus pasatiempos
+          </h2>
+          <input type="time" name="salida">
+        
+         <h2> fecha fav </h2>
+          <input type="month" name="graduacion">
+          
+          <h2>que te gusta mas</h2>
+          
+ <select name="select" >
+<option value="Valor 1">estar solo</option>
+<option value="Valor 2">estar en familia</option>
+<option value="Valor 3">estar con amigos
+</option>
+</select>
+
+<br>
+<br>
+<h2>cuantas horas duermes</h2>
+<input type="radio" name="radiobutton" value="radiobutton">
+10
+<input type="radio" name="radiobutton" value="radiobutton">
+8
+<input type="radio" name="radiobutton" value="radiobutton">
+menos de 8
+<br>
+<br>
+
+         
+
+ <input type="submit" value="Enviar">
+<input type="reset" value="Borrar">
+     </form>
+     </div>
+     </div>
+ </div>
+</body>
+</html>
